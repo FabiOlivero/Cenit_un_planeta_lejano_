@@ -1,0 +1,240 @@
+/* ===== BODY INDUSTRIAL FUTURISTA ===== */
+        body {
+            background: #111;
+            color: #e63946;
+            font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 30px;
+            background-image: url('https://i.ibb.co/ZYW3VTp/metal-texture.jpg');
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+
+        /* ===== TITULOS ===== */
+        h1, h2 {
+            color: #f1faee;
+            text-shadow: 2px 2px 6px #000;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            border-bottom: 4px solid #e63946;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            border-left: 6px solid #e63946;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.9em;
+            animation: glowRed 2s infinite alternate;
+        }
+
+        /* ===== ANIMACIÓN DE GLOW ===== */
+        @keyframes glowRed {
+            0% { text-shadow: 0 0 5px #e63946, 0 0 10px #e63946; }
+            50% { text-shadow: 0 0 15px #ff1a1a, 0 0 25px #ff1a1a; }
+            100% { text-shadow: 0 0 5px #e63946, 0 0 10px #e63946; }
+        }
+
+        /* ===== PÁRRAFOS ===== */
+        p {
+            background-color: rgba(40, 40, 40, 0.85);
+            padding: 15px 20px;
+            border-left: 5px solid #e63946;
+            border-radius: 5px;
+            box-shadow: 3px 3px 15px #000;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Partícula de luz parpadeante en párrafos */
+        p::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 5px;
+            height: 80%;
+            background: linear-gradient(180deg, #e63946, #ff1a1a, #e63946);
+            animation: pulseLight 3s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes pulseLight {
+            0% { transform: scaleY(1); opacity: 0.6; }
+            50% { transform: scaleY(1.2); opacity: 1; }
+            100% { transform: scaleY(1); opacity: 0.6; }
+        }
+
+        /* ===== IMÁGENES Y VIDEO ===== */
+        img, iframe {
+            display: block;
+            margin: 25px auto;
+            border: 4px solid #e63946;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ff1a1a;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        img:hover, iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px #ff1a1a, 0 0 50px #e63946;
+        }
+
+        /* ===== ENLACES ===== */
+        a {
+            color: #f1faee;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: #e63946;
+            text-decoration: underline;
+        }
+
+        /* ===== TABLAS ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: rgba(50, 50, 50, 0.9);
+            box-shadow: 0 0 20px #000;
+            animation: glowTable 3s infinite alternate;
+        }
+
+        th, td {
+            border: 2px solid #e63946;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2a2a2a;
+            color: #f1faee;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        @keyframes glowTable {
+            0% { box-shadow: 0 0 10px #e63946; }
+            50% { box-shadow: 0 0 25px #ff1a1a; }
+            100% { box-shadow: 0 0 10px #e63946; }
+        }
+
+        /* ===== LISTAS ===== */
+        ol {
+            padding-left: 25px;
+        }
+
+        ol li {
+            margin: 10px 0;
+            padding: 8px 12px;
+            background-color: rgba(40, 40, 40, 0.85);
+            border-left: 5px solid #e63946;
+            border-radius: 3px;
+            box-shadow: 2px 2px 10px #000;
+            position: relative;
+        }
+
+        ol li::after {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: -2px;
+            width: 4px;
+            height: 80%;
+            background: linear-gradient(180deg, #ff1a1a, #e63946, #ff1a1a);
+            animation: pulseLight 2.5s infinite;
+        }
+                /* ===== NAVBAR INDUSTRIAL ===== */
+        nav {
+            background: linear-gradient(90deg, #1a1a1a, #2a2a2a);
+            border-bottom: 4px solid #e63946;
+            box-shadow: 0 0 20px #000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 25px;
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f1faee;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            padding: 15px 10px;
+            display: block;
+        }
+
+        /* ===== EFECTO GLOW Y ANIMACIÓN ===== */
+        nav a:hover {
+            color: #e63946;
+            text-shadow: 0 0 10px #e63946, 0 0 20px #ff1a1a;
+        }
+
+        /* Línea luminosa debajo del enlace */
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #e63946, #ff1a1a);
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px #e63946;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== EFECTO DE PULSO EN BORDES ===== */
+        nav::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #e63946, #ff1a1a, #e63946);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; box-shadow: 0 0 5px #e63946; }
+            50% { opacity: 1; box-shadow: 0 0 20px #ff1a1a; }
+            100% { opacity: 0.6; box-shadow: 0 0 5px #e63946; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 700px) {
+            nav ul {
+                flex-direction: column;
+                background: #1a1a1a;
+            }
+            nav li {
+                margin: 10px 0;
+            }
+        }
